@@ -1,0 +1,5 @@
+*.swp
+j2scr.egg-info
+__pycache__
+.coverage
+htmlcov
