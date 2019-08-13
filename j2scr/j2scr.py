@@ -1,15 +1,14 @@
 import jinja2 as _j2
+from .loader import RelativeFileLoader
 
 
 class J2Scr:
     def __init__(self, **kwargs):
-        self.loader = _j2.FileSystemLoader(searchpath=".")
+        self.loader = RelativeFileLoader()
         self.environment = _j2.Environment(loader=self.loader)
         self.set_options(**kwargs)
 
     def __getattr__(self, name):
-        # if hasattr(self, name):
-        #     return super(J2Scr, self).__getattr__(name)
         if hasattr(self.loader, name):
             return getattr(self.loader, name)
         elif hasattr(self.environment, name):
