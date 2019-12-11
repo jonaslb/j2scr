@@ -31,7 +31,7 @@ class J2Scr:
                 setattr(o, k, v)
 
     def render(self, template_path, **kwargs):
-        template = self.environment.get_template(template_path)
+        template = self.environment.get_template(str(template_path))
         return template.render(**kwargs)
 
     def render_to_file(self, template_path, out_path, mode="w", **kwargs):

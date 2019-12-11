@@ -15,7 +15,7 @@ string_with_content = render("../my_template.txt.j2", var=2, var2='Michael')
 # Or into a file
 render_to_file("../my_template.txt.j2", "my_content.txt" var=2, var2='Michael')
 
-# You can optionally change the loader/environment parameters (do it before rendering, of course):
+# You can change the loader/environment parameters (do it before rendering, of course):
 set_options(encoding="latin-1", trim_blocks=True)
 # Alternatively the environment and loaders are available as attributes.
 ```

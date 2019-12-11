@@ -7,7 +7,7 @@ long_description = (Path(__file__).parent / "README.md").read_text()
 
 setup(
     name="j2scr",
-    version="1.0.0",
+    version="1.0.1",
     license="MIT",
     author="Jonas Lundholm Bertelsen",
     packages=find_packages(),
