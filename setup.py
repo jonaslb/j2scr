@@ -1,18 +1,25 @@
 #!/usr/bin/env python3
 import sys
 from setuptools import setup, find_packages
+from pathlib import Path
 
-if sys.version_info < (3, 7):
-    sys.exit("Unsupported Python version (use 3.7)")
-
-install_requires = [
-    "jinja2",
-]
+long_description = (Path(__file__).parent / "README.md").read_text()
 
 setup(
     name="j2scr",
     version="1.0.0",
-    license="LGPLv3+",
+    license="MIT",
+    author="Jonas Lundholm Bertelsen",
     packages=find_packages(),
-    install_requires=install_requires,
+    install_requires=["jinja2"],
+    description="Convenience wrapper around Jinja for scripts",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/jonaslb/j2scr",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.7',
 )
